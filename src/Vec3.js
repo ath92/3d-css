@@ -24,6 +24,13 @@ Vec3.prototype = {
 			this.x * other.y - this.y * other.x,
 		);
 	},
+	average(other) {
+		return new Vec3(
+			(this.x + other.x) / 2,
+			(this.y + other.y) / 2,
+			(this.z + other.z) / 2,
+		);
+	},
 	rotateAroundAxis(axis, angle) {
 		// rodriguez method
 		const term1 = this.multiplyScalar(Math.cos(angle));
